@@ -18,7 +18,7 @@ interface GetImagesResponse {
 const CardList = () => {
 
     const getImage = async (): Promise<GetImagesResponse> => {
-        const MYKEY = 'L9H8NeuotbFcoSfrdDO9qrxVbezdfWz7Uu7UZFhL'
+        const MYKEY = 'O22iEBkxdEBcErkVv6q1jlgJSgNQNdhs7twvC1RC'
 
         const response = await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=${MYKEY}`)
 
@@ -50,7 +50,7 @@ const CardList = () => {
         <section className="flex flex-wrap gap-5 m-10 mobile:justify-center laptop:justify-center">
             {data.photos.map((imgData: ImageDataProps) =>{
              
-                return <CardItem key={imgData.id} imgUrl={imgData.img_src} imgAlt="" date={format(new Date(imgData.earth_date), "MMMM d, yyyy", { locale: ptBR}).charAt(0).toUpperCase() + format(new Date(imgData.earth_date), "MMMM d, yyyy", { locale: ptBR}).slice(1)} description={text}/>
+                return <CardItem key={imgData.id} imgUrl={imgData.img_src} imgAlt="Image Mars Rover" date={format(new Date(imgData.earth_date), "MMMM d, yyyy", { locale: ptBR}).charAt(0).toUpperCase() + format(new Date(imgData.earth_date), "MMMM d, yyyy", { locale: ptBR}).slice(1)} description={text}/>
             })}
         </section>
     )
