@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-background: #FFFFFF;
+    --header-color: #1E2235;
+
+    --card-border: #BBBBBB;
+    --card-background: #F4F4F4;
+    
+    --card-text-date: #ABADC6;
+    --card-text-main: #515050;
+
+    --card-button-color: #2463EB;
+
+    --card-header-gray-300: #D2D3D7;
+    --card-header-gray-600: #8F919A;
+
+}
+
+
+@layer base {
+
+    *{
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: var(color-background);
+    }
+
+    html, body, input, textarea, select, button {
+        font-family: 'Inter', sans-serif;
+    }
+}
